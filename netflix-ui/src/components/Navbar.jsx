@@ -16,7 +16,10 @@ export default function Navbar({isScrolled}) {
         if (!currentUser) navigate("/login");
     });
     const [showSearch, setShowSearch] = useState(false);
-    const [inputHover, setInputHover] = useState(false);
+  const [inputHover, setInputHover] = useState(false);
+
+
+
   return (
       <Container>
           <nav className={`flex ${isScrolled ? "scrolled" : ""}`} >
@@ -47,8 +50,13 @@ export default function Navbar({isScrolled}) {
                           onMouseLeave={() => setInputHover(false)}
                           onBlur={() => {
                               setShowSearch(false);
-                              setInputHover(false);
-                      }}/>
+                            setInputHover(false);
+                          
+                      }}
+              
+   
+            />
+            
                   </div>
                   <button onClick={()=>signOut(firebaseAuth)}>
                       <FaPowerOff/>

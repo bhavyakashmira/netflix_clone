@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import Navbar from "../components/Navbar";
 import backgroundImage from "../assets/home.jpg";
-//import MovieLogo from "../assets/homeTitle.webp";
+
 
 import { onAuthStateChanged } from "firebase/auth";
 import { firebaseAuth } from "../utils/firebase-config";
@@ -49,9 +49,10 @@ function Netflix() {
           alt="background"
           className="background-image"
         />
+
         <div className="container">
           <div className="logo">
-            {/* <img src={MovieLogo} alt="Movie Logo" /> */}
+         
           </div>
           <div className="buttons flex">
             <button
